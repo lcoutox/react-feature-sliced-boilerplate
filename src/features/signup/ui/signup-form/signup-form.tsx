@@ -4,9 +4,10 @@ import { useForm } from 'react-hook-form'
 import {
   type SignUpFormSchema,
   signupFormSchema,
-} from '../../model/signup-form-schema'
+} from '@/features/signup/model/signup-form-schema'
 import styles from './signup-form.module.css'
 import { useCallback } from "react";
+import { signupRequest } from "../../model/signup";
 
 export default function SignUpForm() {
   const {
@@ -19,7 +20,7 @@ export default function SignUpForm() {
 
   const onSubmitHandler = useCallback(
     ({ name, email, password }: SignUpFormSchema) => {
-      console.log({ name, email, password})
+      signupRequest({ name, email, password})
     },
     []
   )

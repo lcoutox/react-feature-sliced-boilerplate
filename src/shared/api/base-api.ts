@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios';
+import { config } from '@/shared/lib/config';
 
-const API_URL = 'https://api.example.com'
 
 const createBaseApi = (baseURL: string): AxiosInstance => {
   const instance = axios.create({
@@ -30,5 +30,5 @@ const createBaseApi = (baseURL: string): AxiosInstance => {
 };
 
 export { createBaseApi };
-const baseApi = createBaseApi(API_URL);
+const baseApi = createBaseApi(config.API_URL);
 export default baseApi
