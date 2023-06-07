@@ -5,6 +5,7 @@ import {
   type SignUpFormSchema,
   signupFormSchema,
 } from '../../model/signup-form-schema'
+import styles from './signup-form.module.css'
 import { useCallback } from "react";
 
 export default function SignUpForm() {
@@ -24,25 +25,28 @@ export default function SignUpForm() {
   )
 
   return (
-    <form className='flex flex-col gap-8' onSubmit={handleSubmit(onSubmitHandler)}>
-      <div className="flex flex-col gap-4">
+    <form className={styles.form} onSubmit={handleSubmit(onSubmitHandler)}>
+      <div className={styles.content}>
         <TextInput 
-          icon="email" 
+          name="name"
+          icon="user" 
           label="Nome" 
-          {...register('name')} 
+          register={register}
           error={errors.name?.message && 'Campo obrigatório'}
         />
         <TextInput 
+          name="email"
           icon="email" 
           label="Email" 
-          {...register('email')} 
+          register={register}
           error={errors.email?.message && 'Campo obrigatório'}
         />
         <TextInput 
           password 
+          name="password"
           icon="password" 
           label="Senha" 
-          {...register('password')} 
+          register={register}
           error={errors.password?.message && 'Campo obrigatório'}
         />
       </div>
