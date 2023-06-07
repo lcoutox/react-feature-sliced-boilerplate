@@ -8,8 +8,9 @@ type Params = {
 
 export const signupRequest = async (params: Params) => {
   try {
-    await signup(params);
+    return await signup(params);
   } catch (error) {
+    console.log({ error })
     throw new Error('Unknown error');
   }
 };

@@ -8,6 +8,7 @@ import {
 import styles from './signup-form.module.css'
 import { useCallback } from "react";
 import { signupRequest } from "../../model/signup";
+import { toast } from "react-toastify";
 
 export default function SignUpForm() {
   const {
@@ -19,8 +20,13 @@ export default function SignUpForm() {
   })
 
   const onSubmitHandler = useCallback(
-    ({ name, email, password }: SignUpFormSchema) => {
-      signupRequest({ name, email, password})
+    async ({ name, email, password }: SignUpFormSchema) => {
+      try {
+        await signupRequest({ name, email, password})
+        toast.success('Cadastrado com sucesso!')
+      } catch (error) {
+        toast.error('Email já em uso.')
+      }
     },
     []
   )

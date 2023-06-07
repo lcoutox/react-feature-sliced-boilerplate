@@ -8,7 +8,7 @@ const createBaseApi = (baseURL: string): AxiosInstance => {
   });
 
   instance.interceptors.response.use(
-    (response: AxiosResponse) => response.data,
+    (response: AxiosResponse) => response,
     (error: AxiosError) => {
       // Tratar erros de resposta aqui
       return Promise.reject(error);
@@ -30,5 +30,5 @@ const createBaseApi = (baseURL: string): AxiosInstance => {
 };
 
 export { createBaseApi };
-const baseApi = createBaseApi(config.API_URL);
+const baseApi = createBaseApi(config.API_URL + '/api');
 export default baseApi
