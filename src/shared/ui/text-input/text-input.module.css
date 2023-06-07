@@ -17,3 +17,7 @@
 .input_base {
   @apply outline-0 bg-grey-lightest h-10 w-full;
 }
+
+.error_text {
+  @apply text-errorColor text-xs mt-1;
+}

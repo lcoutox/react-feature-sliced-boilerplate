@@ -11,7 +11,8 @@ export default {
       'textColor': '#455A64',
       'grey': {
         'lightest': '#eceff1'
-      }
+      },
+      'errorColor': '#ef4444'
     },
     extend: {
       screens: {
