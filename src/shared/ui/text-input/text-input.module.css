@@ -2,8 +2,16 @@
   @apply text-sm mb-1 text-textColor;
 }
 
+.icon {
+  @apply text-textColor text-xl mr-2;
+}
+
+.password_icon {
+  @apply text-textColor text-xl ml-2;
+}
+
 .input_wrapper { 
-  @apply bg-grey-lightest px-2 rounded text-sm w-full ;
+  @apply bg-grey-lightest px-2 rounded text-sm w-full flex items-center;
 }
 
 .input_base {

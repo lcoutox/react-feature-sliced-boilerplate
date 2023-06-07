@@ -15,3 +15,20 @@ export const Default: Story = {
         placeholder: 'Enter text...',
     },
 };
+
+export const Email: Story = {
+    args: {
+        label: 'Email',
+        placeholder: 'Enter email...',
+        icon: 'email',
+    },
+};
+
+export const Password: Story = {
+    args: {
+        label: 'Password',
+        placeholder: 'Enter password...',
+        icon: 'password',
+        password: true,
+    },
+};
