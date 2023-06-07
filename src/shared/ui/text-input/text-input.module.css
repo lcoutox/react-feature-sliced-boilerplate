@@ -1,0 +1,11 @@
+.label {
+  @apply text-sm mb-1 text-textColor;
+}
+
+.input_wrapper { 
+  @apply bg-grey-lightest px-2 rounded text-sm w-full ;
+}
+
+.input_base {
+  @apply outline-0 bg-grey-lightest h-10 w-full;
+}

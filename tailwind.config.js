@@ -7,7 +7,11 @@ export default {
   theme: {
     colors: {
       'primary': '#2563eb',
-      'white': '#FFFFFF'
+      'white': '#FFFFFF',
+      'textColor': '#455A64',
+      'grey': {
+        'lightest': '#eceff1'
+      }
     },
     extend: {
       screens: {
